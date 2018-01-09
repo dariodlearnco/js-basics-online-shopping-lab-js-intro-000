@@ -67,6 +67,15 @@ function viewCart() {
     console.log(response)
 }
 
+function formatCartItem(item) {
+    for (var property in item) {
+        if (item.hasOwnProperty(property)) {
+            return `${item} at \$${cart[i][item]}`
+        }
+    }
+    return ``
+}
+
 function total() {
   // write your code here
 }
