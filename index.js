@@ -28,6 +28,10 @@ function viewCart() {
     var cart=getCart()
     var response='In your cart, you have '
 
+    if (cart.length === 0 ) {
+        console.log('Your shopping cart is empty.')
+    }
+
     for (var i=0; i < cart.length; i++) {
         if (i === 0) {
             // This is the first iteration
@@ -53,6 +57,7 @@ function viewCart() {
         }
     }
     response=`${response}.`
+    console.log(response)
 }
 
 function total() {
