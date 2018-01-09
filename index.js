@@ -35,7 +35,7 @@ function viewCart() {
     for (var i=0; i < cart.length; i++) {
         if (i === 0) {
             // This is the first iteration
-            response=`${response} ${formatCartItem(cart[i])}`    
+            response=`${response} ${formatCartItem(cart[i])}`
         } else if ( i === (cart.length - 1) && i === 1 ) {
             // This is the last iteration of a cart with two elements
             response=`${response} and ${formatCartItem(cart[i])}`
