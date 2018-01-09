@@ -33,14 +33,14 @@ function viewCart() {
     }
 
     for (var i=0; i < cart.length; i++) {
-        if (i == 0) {
+        if (i === 0) {
             // This is the first iteration
             for (var item in cart[i]) {
                 if (cart[i].hasOwnProperty(item)) {
                     response=`${response} ${item} at \$${cart[i][item]}`
                 }
             }
-        } else if ( i == (cart.length - 1)) {
+        } else if ( i === (cart.length - 1)) {
             // This is the last iteration
             for (var item in cart[i]) {
                 if (cart[i].hasOwnProperty(item)) {
