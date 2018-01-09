@@ -62,11 +62,14 @@ function formatCartItem(item) {
 
 
 function total() {
+
+    var cart=getCart()
     var total = 0
+
     for (var i=0; i < cart.length; i++) {
         total += getCartItemPrice(cart[i])
-     }
-     return total
+    }
+    return total
 }
 
 function getCartItemPrice(item) {
@@ -77,9 +80,29 @@ function getCartItemPrice(item) {
     }
 }
 
-function removeFromCart(item) {
-  // write your code here
+function getCartItemName(item) {
+    for (var property in item) {
+        if (item.hasOwnProperty(property)) {
+            return property
+        }
+    }
 }
+
+function removeFromCart(item) {
+    var cart=getCArt()
+    for (var i=0; i < cart.length; i++) {
+        if (item === getCartItemName(cart[i])) {
+            cart.splice(i,1)
+            return cart
+        }
+    }
+    // If we end up here, no item in the cart
+    // matched the argument
+    console.log('That item is not in your cart.')
+    return cart
+}
+
+
 
 function placeOrder(cardNumber) {
   // write your code here
