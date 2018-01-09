@@ -35,32 +35,16 @@ function viewCart() {
     for (var i=0; i < cart.length; i++) {
         if (i === 0) {
             // This is the first iteration
-            for (var item in cart[i]) {
-                if (cart[i].hasOwnProperty(item)) {
-                    response=`${response} ${item} at \$${cart[i][item]}`
-                }
-            }
+            response=`${response} ${formatCartItem(cart[i])}`    
         } else if ( i === (cart.length - 1) && i === 1 ) {
             // This is the last iteration of a cart with two elements
-            for (var item in cart[i]) {
-                if (cart[i].hasOwnProperty(item)) {
-                    response=`${response} and ${item} at \$${cart[i][item]}`
-                }
-            }
+            response=`${response} and ${formatCartItem(cart[i])}`
         } else if ( i === (cart.length - 1) ) {
             // This is the last iteration of a cart with more than two elements
-            for (var item in cart[i]) {
-                if (cart[i].hasOwnProperty(item)) {
-                    response=`${response}, and ${item} at \$${cart[i][item]}`
-                }
-            }
+            response=`${response}, and ${formatCartItem(cart[i])}`
         } else {
             // This is an intermediate iteration
-            for (var item in cart[i]) {
-                if (cart[i].hasOwnProperty(item)) {
-                    response=`${response}, ${item} at \$${cart[i][item]}`
-                }
-            }
+            response=`${response}, ${formatCartItem(cart[i])}`
         }
     }
     response=`${response}.`
@@ -70,7 +54,7 @@ function viewCart() {
 function formatCartItem(item) {
     for (var property in item) {
         if (item.hasOwnProperty(property)) {
-            return `${item} at \$${cart[i][item]}`
+            return `${property} at \$${item[property]}`
         }
     }
 }
