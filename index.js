@@ -9,7 +9,7 @@ function setCart(c) {
   return cart;
 }
 
-unction addToCart(item) {
+function addToCart(item) {
     // write your code here
     cart.push({ [item] : getRandomInt(1,100)})
     console.log(`${item} has been added to your cart.`)
