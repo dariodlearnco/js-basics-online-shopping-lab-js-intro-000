@@ -59,8 +59,6 @@ function formatCartItem(item) {
     }
 }
 
-
-
 function total() {
 
     var cart=getCart()
