@@ -120,6 +120,6 @@ function placeOrder(cardNumber) {
     console.log(`Your total cost is \$${total()}, which will be charged to the card ${cardNumber}.`)
 
     // cart.splice(0,cart.length)
-    cart.splice(0,cart.lenght)
+    cart.splice(0,cart.length)
 
 }
