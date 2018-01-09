@@ -27,12 +27,32 @@ function getRandomInt(min, max) {
 function viewCart() {
     var cart=getCart()
     var response='In your cart, you have '
-    
+
     for (var i=0; i < cart.length; i++) {
-        
+        if (i === 0) {
+            // This is the first iteration
+            for (var item in cart[i]) {
+                if (cart[i].hasOwnProperty(item)) {
+                    response=`${response} ${item} at \$${cart[i][item]}`
+                }
+            }
+        } else if ( i === (cart.length - 1)) {
+            // This is the last iteration
+            for (var item in cart[i]) {
+                if (cart[i].hasOwnProperty(item)) {
+                    response=`${response} and ${item} at \$${cart[i][item]}`
+                }
+            }
+        } else {
+            // This is an intermediate iteration
+            for (var item in cart[i]) {
+                if (cart[i].hasOwnProperty(item)) {
+                    response=`${response}, ${item} at \$${cart[i][item]}`
+                }
+            }
+        }
     }
-    `In your cart, you have bananas at $17, pancake batter at $5, and eggs at $49.`
-        + If the cart is empty, the function should instead print out `Your shopping cart is empty.`
+    response=`${response}.`
 }
 
 function total() {
