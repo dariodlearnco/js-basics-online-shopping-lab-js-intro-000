@@ -59,8 +59,22 @@ function formatCartItem(item) {
     }
 }
 
+
+
 function total() {
-  // write your code here
+    var total = 0
+    for (var i=0; i < cart.length; i++) {      
+        total += getCartItemPrice(cart[i])
+     }
+     return total
+}
+
+function getCartItemPrice(item) {
+    for (var property in item) {
+        if (item.hasOwnProperty(property)) {
+            return item[property]
+        }
+    }
 }
 
 function removeFromCart(item) {
