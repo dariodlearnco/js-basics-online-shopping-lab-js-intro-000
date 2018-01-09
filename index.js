@@ -9,8 +9,19 @@ function setCart(c) {
   return cart;
 }
 
-function addToCart(item) {
- // write your code here
+unction addToCart(item) {
+    // write your code here
+    var item = { [item] : getRandomInt(1,100)}
+
+
+}
+
+function getRandomInt(min, max) {
+  // The maximum is exclusive and the minimum is inclusive
+  // To make the maximum inclusive, we added 1 to the value.
+  min = Math.ceil(min);
+  max = Math.floor(max) + 1;
+  return Math.floor(Math.random() * (max - min)) + min;
 }
 
 function viewCart() {
