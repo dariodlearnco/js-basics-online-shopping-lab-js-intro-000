@@ -25,7 +25,14 @@ function getRandomInt(min, max) {
 }
 
 function viewCart() {
-  // write your code here
+    var cart=getCart()
+    var response='In your cart, you have '
+    
+    for (var i=0; i < cart.length; i++) {
+        
+    }
+    `In your cart, you have bananas at $17, pancake batter at $5, and eggs at $49.`
+        + If the cart is empty, the function should instead print out `Your shopping cart is empty.`
 }
 
 function total() {
