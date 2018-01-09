@@ -40,8 +40,15 @@ function viewCart() {
                     response=`${response} ${item} at \$${cart[i][item]}`
                 }
             }
-        } else if ( i === (cart.length - 1) && i !== 1 ) {
-            // This is the last iteration
+        } else if ( i === (cart.length - 1) && i === 1 ) {
+            // This is the last iteration of a cart with two elements
+            for (var item in cart[i]) {
+                if (cart[i].hasOwnProperty(item)) {
+                    response=`${response} and ${item} at \$${cart[i][item]}`
+                }
+            }
+        } else if ( i === (cart.length - 1) ) {
+            // This is the last iteration of a cart with more than two elements
             for (var item in cart[i]) {
                 if (cart[i].hasOwnProperty(item)) {
                     response=`${response}, and ${item} at \$${cart[i][item]}`
