@@ -44,7 +44,7 @@ function viewCart() {
             // This is the last iteration
             for (var item in cart[i]) {
                 if (cart[i].hasOwnProperty(item)) {
-                    response=`${response} and ${item} at \$${cart[i][item]}`
+                    response=`${response}, and ${item} at \$${cart[i][item]}`
                 }
             }
         } else {
