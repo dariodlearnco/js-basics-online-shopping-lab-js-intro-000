@@ -89,13 +89,18 @@ function getCartItemName(item) {
 }
 
 function removeFromCart(item) {
+
     var cart=getCart()
+
+    // Loop through the cart to find out if item is there
     for (var i=0; i < cart.length; i++) {
         if (item === getCartItemName(cart[i])) {
+            // If item is found, remove it from the cart
             cart.splice(i,1)
             return cart
         }
     }
+
     // If we end up here, no item in the cart
     // matched the argument
     console.log('That item is not in your cart.')
@@ -105,5 +110,12 @@ function removeFromCart(item) {
 
 
 function placeOrder(cardNumber) {
-  // write your code here
+    if ( !cardNumber ) {
+        console.log('Sorry, we don\'t have a credit card on file for you.')
+    }
+
+    console.log(`Your total cost is ${total()}, which will be charged to the card ${cardNumber}.`)
+
+    getCart()=[]
+
 }
