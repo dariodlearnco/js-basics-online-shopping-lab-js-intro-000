@@ -63,7 +63,7 @@ function formatCartItem(item) {
 
 function total() {
     var total = 0
-    for (var i=0; i < cart.length; i++) {      
+    for (var i=0; i < cart.length; i++) {
         total += getCartItemPrice(cart[i])
      }
      return total
