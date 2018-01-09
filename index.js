@@ -121,5 +121,6 @@ function placeOrder(cardNumber) {
 
     // cart.splice(0,cart.length)
     cart=[]
+    console.debug(cart)
 
 }
