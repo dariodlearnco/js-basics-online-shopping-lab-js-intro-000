@@ -73,7 +73,6 @@ function formatCartItem(item) {
             return `${item} at \$${cart[i][item]}`
         }
     }
-    return ``
 }
 
 function total() {
