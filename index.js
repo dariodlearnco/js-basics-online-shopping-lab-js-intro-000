@@ -26,7 +26,7 @@ function getRandomInt(min, max) {
 
 function viewCart() {
     var cart=getCart()
-    var response='In your cart, you have '
+    var response='In your cart, you have'
 
     if (cart.length === 0 ) {
         console.log('Your shopping cart is empty.')
